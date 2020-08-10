@@ -1,0 +1,40 @@
+biolib_version: 1
+description_file: README.md
+modules:
+    main:
+        path: src/main.py
+        executor: 'bl-python3:*'
+output_type: markdown
+arguments:
+    -
+        default_value: example.csv
+        description: Add input file
+        key: '--infile'
+        key_value_separator: ' '
+        required: true
+        type: file
+    -
+        default_value: pearson
+        description: Choose method to calculate correlation matrix
+        key: '--method'
+        key_value_separator: ' '
+        required: true
+        type: dropdown
+        options:
+            Pearson: pearson
+            Kendall: kendall
+            Spearman: spearman
+    -
+        default_value: seismic
+        description: Choose color scale for the correlation matrix
+        key: '--color'
+        key_value_separator: ' '
+        required: true
+        type: dropdown
+        options:
+            Seismic: seismic
+            Viridis: viridis
+            Magma: magma
+            Cividis: cividis
+            Jet: jet
+            Cubehelix: cubehelix
