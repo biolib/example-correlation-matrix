@@ -8,7 +8,7 @@ env:
 
 jobs:
     build-and-publish:
-        name: Build Docker image and publish if on main
+        name: Biolib push if on main
         runs-on: ubuntu-latest
         steps:
             -   name: Checkout
