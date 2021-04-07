@@ -27,4 +27,4 @@ B -0.396880  1.000000  0.439338
 C  0.322275  0.439338  1.000000
 ```
  
-![Correlation matrix example](https://github.com/biolib/example-correlation-matrix/blob/master/images/correlation.png)
+![Correlation matrix example](images/correlation.png)
