@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd 
 import argparse
-import base64
+
 
 def corr_mat(df, corm, color, r=150, show=True, dim=(5, 4), axtickfontsize=9, ar=90, figtype='png'):
     d_corr = df.corr(method=corm)
@@ -22,9 +22,7 @@ def corr_mat(df, corm, color, r=150, show=True, dim=(5, 4), axtickfontsize=9, ar
     plt.savefig('corr_mat.png', format='png', bbox_inches='tight', dpi=r)
 
     # Generate the Markdown preview
-    file_data = open("corr_mat.png", "rb").read()
-    data = base64.b64encode(file_data).decode('ascii')
-    print('![picture](data:{};base64,{})'.format('image/png', data))
+    print('![picture](corr_mat.png)')
     # Print to screen
     print('\nCorrelation matrix: \n\n ```', d_corr)
 
