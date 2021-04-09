@@ -1,8 +1,14 @@
-biolib_version: 1
+biolib_version: 2
 modules:
     main:
-        executor: 'bl-python3:*'
-        path: src/root.py
+        command: src/root.py
+        working_directory: /home/biolib/
+        input_files:
+            - COPY / /home/biolib/
+        output_files:
+            - COPY /home/biolib/ /
+        source_files:
+            - COPY / /home/biolib/
 output_type: markdown
 arguments:
     -
