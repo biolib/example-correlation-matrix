@@ -1,8 +1,8 @@
 biolib_version: 2
 modules:
     main:
-        image: 'biolib://biolib/python3:*'
-        command: src/root.py
+        image: biolib://biolib/python3:*
+        command: /home/biolib/src/root.py
         working_directory: /home/biolib/
         input_files:
             - COPY / /home/biolib/
